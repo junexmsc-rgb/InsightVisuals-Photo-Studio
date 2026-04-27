@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-black">
+<html lang="en" class="scroll-smooth bg-black text-white">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InsightVisuals | The Cinematic Canvas</title>
+    <title>InsightVisuals | Premium Photography in Gbagada</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind-config.js"></script>
@@ -15,101 +15,253 @@
     
     <script src="./app.js" defer></script>
 </head>
-<body class="antialiased selection:bg-white selection:text-black overflow-x-hidden">
+<body class="antialiased selection:bg-white selection:text-black overflow-x-hidden cursor-none">
 
-    <header class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1604904612715-47bf9d9bc670?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-30"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-        
-        <div class="relative z-10 text-center px-4">
-            <h1 class="hero-title text-[12vw] md:text-[8vw] font-display uppercase leading-none tracking-tighter text-mask">
-                InsightVisuals
-            </h1>
-            <p class="hero-subtitle mt-6 text-lg md:text-2xl font-light tracking-widest text-zinc-400 uppercase">
-                Mastering Light & Shadow in Gbagada
-            </p>
+    <div class="custom-cursor hidden lg:block"></div>
+    
+    <div class="film-grain"></div>
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-500 glass-nav px-6 py-6 flex justify-between items-center mix-blend-difference">
+        <a href="#" class="text-2xl font-display font-bold uppercase tracking-tighter hover:text-signature transition-colors magnetic-el">
+            IV.
+        </a>
+        <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-light">
+            <a href="#philosophy" class="hover:text-signature transition-colors magnetic-el">Philosophy</a>
+            <a href="#services" class="hover:text-signature transition-colors magnetic-el">Services</a>
+            <a href="#portfolio" class="hover:text-signature transition-colors magnetic-el">Portfolio</a>
+            <a href="#investment" class="hover:text-signature transition-colors magnetic-el">Investment</a>
         </div>
+        <button class="md:hidden flex flex-col gap-1.5 z-50 menu-btn">
+            <span class="w-8 h-[2px] bg-white block transition-all"></span>
+            <span class="w-8 h-[2px] bg-white block transition-all"></span>
+        </button>
+    </nav>
+
+    <header class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-black" id="home">
+        <div class="absolute inset-0 z-0 hero-img-container">
+            <img src="https://images.unsplash.com/photo-1604904612715-47bf9d9bc670?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover opacity-40 scale-110 hero-parallax" alt="Hero Background">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10"></div>
         
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-50 hero-scroll">
-            <span class="text-xs tracking-widest uppercase mb-2">Scroll to Explore</span>
-            <div class="w-[1px] h-12 bg-white bg-opacity-30 overflow-hidden relative">
-                <div class="w-full h-full bg-white absolute top-0 left-0 scroll-line-anim"></div>
+        <div class="relative z-20 text-center px-4 w-full max-w-7xl mx-auto flex flex-col items-center">
+            <div class="overflow-hidden mb-4">
+                <h2 class="text-sm md:text-lg font-light tracking-[0.5em] text-zinc-400 uppercase hero-fade">Gbagada, Lagos</h2>
+            </div>
+            <h1 class="hero-title text-[15vw] md:text-[10vw] font-display uppercase leading-none tracking-tighter text-white mix-blend-overlay opacity-90">
+                Insight
+            </h1>
+            <h1 class="hero-title-2 text-[15vw] md:text-[10vw] font-display uppercase leading-none tracking-tighter text-transparent outline-text -mt-4 md:-mt-10">
+                Visuals
+            </h1>
+            <div class="overflow-hidden mt-8">
+                <a href="#services" class="magnetic-el inline-block px-10 py-4 border border-white/30 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm hero-fade">
+                    Explore Our Vision
+                </a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="gallery-wrapper" id="portfolio">
-            <div class="gallery-container">
-                <div class="gallery-panel bg-black">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Editorial Photography">
-                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
-                        Editorial
-                    </h2>
+    <main class="relative z-20 bg-black">
+        
+        <section class="py-32 px-6 md:px-16 max-w-7xl mx-auto" id="philosophy">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5 relative">
+                    <img src="https://images.unsplash.com/photo-1554046920-90dcac823a07?auto=format&fit=crop&q=80&w=800" alt="Photographer" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 reveal-img">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 border border-signature/50 rounded-full flex items-center justify-center rotate-animation hidden md:flex backdrop-blur-sm">
+                        <span class="text-xs tracking-widest uppercase text-center p-4">Mastering Light & Shadow</span>
+                    </div>
                 </div>
-                <div class="gallery-panel bg-zinc-950">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Wedding Photography">
-                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
-                        Wedding
-                    </h2>
-                </div>
-                <div class="gallery-panel bg-black">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Portrait Photography">
-                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
-                        Portrait
-                    </h2>
-                </div>
-                <div class="gallery-panel bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Commercial Photography">
-                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
-                        Commercial
-                    </h2>
+                <div class="md:col-span-7 flex flex-col justify-center">
+                    <h3 class="text-signature text-sm tracking-[0.3em] uppercase mb-6 reveal-text">Our Philosophy</h3>
+                    <h2 class="text-4xl md:text-6xl font-display uppercase tracking-tight mb-8 leading-tight reveal-text">We don't capture moments. <br>We architect them.</h2>
+                    <p class="text-xl text-zinc-400 font-light mb-6 leading-relaxed reveal-text">
+                        Located in the heart of Gbagada, InsightVisuals is a premium studio dedicated to the art of high-end portraiture, editorial fashion, and timeless wedding documentation. 
+                    </p>
+                    <p class="text-lg text-zinc-500 font-light mb-10 leading-relaxed reveal-text">
+                        Every frame is a meticulous study of geometry, emotion, and unparalleled aesthetics. We treat your legacy with the absolute precision it deserves.
+                    </p>
+                    <div class="reveal-text">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sony_logo.svg/2560px-Sony_logo.svg.png" class="h-6 opacity-30 invert" alt="Sony Alpha">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 px-6 bg-black relative flex flex-col items-center justify-center text-center">
+        <section class="py-32 bg-zinc-950 border-t border-white/5" id="services">
+            <div class="max-w-7xl mx-auto px-6 md:px-16">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal-text">
+                    <div>
+                        <h3 class="text-signature text-sm tracking-[0.3em] uppercase mb-4">Disciplines</h3>
+                        <h2 class="text-5xl md:text-7xl font-display uppercase tracking-tighter">Our Services</h2>
+                    </div>
+                    <p class="text-zinc-400 max-w-sm text-right hidden md:block">Bespoke visual solutions tailored for brands, couples, and individuals demanding excellence.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-white/10 service-grid">
+                    <div class="p-10 border-b border-r border-white/10 hover:bg-white/5 transition-colors group cursor-pointer service-card">
+                        <div class="text-4xl text-zinc-700 font-display mb-6 group-hover:text-signature transition-colors">01</div>
+                        <h4 class="text-3xl font-display uppercase tracking-tight mb-4">Editorial & Fashion</h4>
+                        <p class="text-zinc-400 font-light mb-8">High-concept studio and location shoots designed for magazine spreads, lookbooks, and avant-garde campaigns.</p>
+                        <div class="flex items-center gap-2 text-signature text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300">
+                            <span>Explore</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-10 border-b border-r border-white/10 hover:bg-white/5 transition-colors group cursor-pointer service-card">
+                        <div class="text-4xl text-zinc-700 font-display mb-6 group-hover:text-signature transition-colors">02</div>
+                        <h4 class="text-3xl font-display uppercase tracking-tight mb-4">Wedding & Legacy</h4>
+                        <p class="text-zinc-400 font-light mb-8">Unobtrusive, cinematic documentation of your most significant day. We turn passing emotions into timeless art.</p>
+                        <div class="flex items-center gap-2 text-signature text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300">
+                            <span>Explore</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-10 border-b border-r border-white/10 hover:bg-white/5 transition-colors group cursor-pointer service-card">
+                        <div class="text-4xl text-zinc-700 font-display mb-6 group-hover:text-signature transition-colors">03</div>
+                        <h4 class="text-3xl font-display uppercase tracking-tight mb-4">Commercial Brand</h4>
+                        <p class="text-zinc-400 font-light mb-8">Crisp, conversion-focused imagery for products, corporate headshots, and real estate architecture.</p>
+                        <div class="flex items-center gap-2 text-signature text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300">
+                            <span>Explore</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-10 border-b border-r border-white/10 hover:bg-white/5 transition-colors group cursor-pointer service-card">
+                        <div class="text-4xl text-zinc-700 font-display mb-6 group-hover:text-signature transition-colors">04</div>
+                        <h4 class="text-3xl font-display uppercase tracking-tight mb-4">Fine Art Portraiture</h4>
+                        <p class="text-zinc-400 font-light mb-8">Deeply personal, masterfully lit studio sessions that capture the raw essence of the individual.</p>
+                        <div class="flex items-center gap-2 text-signature text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300">
+                            <span>Explore</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-wrapper bg-black" id="portfolio">
+            <div class="absolute top-10 left-10 z-10 mix-blend-difference hidden md:block">
+                <h3 class="text-white text-sm tracking-[0.3em] uppercase">Selected Works</h3>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-panel bg-black">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Editorial Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-display uppercase tracking-tighter text-transparent outline-text pointer-events-none opacity-80">Editorial</h2>
+                </div>
+                <div class="gallery-panel bg-zinc-950">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Wedding Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-display uppercase tracking-tighter text-transparent outline-text pointer-events-none opacity-80">Wedding</h2>
+                </div>
+                <div class="gallery-panel bg-black">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Portrait Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-display uppercase tracking-tighter text-transparent outline-text pointer-events-none opacity-80">Portraiture</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 md:px-16 max-w-7xl mx-auto" id="investment">
+            <div class="text-center mb-20 reveal-text">
+                <h3 class="text-signature text-sm tracking-[0.3em] uppercase mb-4">Investment</h3>
+                <h2 class="text-5xl md:text-6xl font-display uppercase tracking-tighter mb-6">Commission Us</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto">We accept a limited number of commissions per quarter to ensure uncompromising quality for every client.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-white/10 p-10 flex flex-col hover:border-signature transition-colors duration-500 reveal-card">
+                    <h4 class="text-2xl font-display uppercase tracking-tight mb-2">Studio Session</h4>
+                    <p class="text-zinc-500 text-sm mb-8 pb-8 border-b border-white/10">Perfect for headshots and personal branding.</p>
+                    <ul class="space-y-4 mb-12 flex-grow text-zinc-300 font-light">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 2 Hour Studio Time</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 2 Wardrobe Changes</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 10 High-End Retouched Edits</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Online Delivery Gallery</li>
+                    </ul>
+                    <a href="https://wa.me/2347038890258" target="_blank" class="w-full py-4 text-center border border-white/30 hover:bg-white hover:text-black transition-colors uppercase tracking-widest text-sm magnetic-el">Inquire</a>
+                </div>
+                <div class="border border-signature bg-signature/5 p-10 flex flex-col relative transform md:-translate-y-4 reveal-card">
+                    <div class="absolute top-0 right-0 bg-signature text-black text-xs font-bold px-4 py-2 uppercase tracking-widest">Most Popular</div>
+                    <h4 class="text-2xl font-display uppercase tracking-tight mb-2">Editorial Campaign</h4>
+                    <p class="text-zinc-500 text-sm mb-8 pb-8 border-b border-white/10">Full creative direction for brands and artists.</p>
+                    <ul class="space-y-4 mb-12 flex-grow text-zinc-300 font-light">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Half-Day Shoot (Location/Studio)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Creative Direction & Moodboarding</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 25 High-End Retouched Edits</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Commercial Usage Rights</li>
+                    </ul>
+                    <a href="https://wa.me/2347038890258" target="_blank" class="w-full py-4 text-center bg-signature text-black font-bold hover:bg-white transition-colors uppercase tracking-widest text-sm magnetic-el">Inquire</a>
+                </div>
+                <div class="border border-white/10 p-10 flex flex-col hover:border-signature transition-colors duration-500 reveal-card">
+                    <h4 class="text-2xl font-display uppercase tracking-tight mb-2">Wedding Legacy</h4>
+                    <p class="text-zinc-500 text-sm mb-8 pb-8 border-b border-white/10">Comprehensive coverage for your monumental day.</p>
+                    <ul class="space-y-4 mb-12 flex-grow text-zinc-300 font-light">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Full Day Coverage (Up to 10hrs)</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 2 Lead Photographers</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> 500+ Color Graded Images</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-signature"></span> Premium Layflat Album</li>
+                    </ul>
+                    <a href="https://wa.me/2347038890258" target="_blank" class="w-full py-4 text-center border border-white/30 hover:bg-white hover:text-black transition-colors uppercase tracking-widest text-sm magnetic-el">Inquire</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 bg-zinc-950 relative flex flex-col items-center justify-center text-center border-t border-white/5">
             <div class="max-w-4xl mx-auto">
                 <div class="flex justify-center gap-2 mb-8 star-container">
-                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 </div>
                 
                 <h3 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 social-text">
                     5.0 Stars. 162 Reviews.
                 </h3>
                 <p class="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto social-text">
-                    Gbagada's most trusted lens. We don't just capture moments; we architect them. An impeccable reputation built frame by frame.
+                    An impeccable reputation built frame by frame. Trusted by industry leaders and couples across Lagos.
                 </p>
             </div>
         </section>
+
     </main>
 
-    <footer class="w-full bg-onyx pt-20 pb-10 px-6 border-t border-white/10">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mb-16">
-            <div class="mb-8 md:mb-0 text-center md:text-left">
-                <h4 class="text-3xl font-display uppercase tracking-tighter mb-2">InsightVisuals</h4>
-                <p class="text-zinc-500">Gbagada, Lagos</p>
+    <footer class="w-full bg-black pt-24 pb-10 px-6 border-t border-white/10 relative z-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <h4 class="text-4xl font-display uppercase tracking-tighter mb-4">InsightVisuals</h4>
+                <p class="text-zinc-500 font-light max-w-sm mb-8">Architecting light and shadow. The premier destination for timeless visual documentation in Lagos.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors magnetic-el">IG</a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors magnetic-el">X</a>
+                </div>
             </div>
             
-            <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-zinc-300 transition-colors duration-300 cursor-pointer">
-                Book a Session
-            </a>
+            <div>
+                <h5 class="text-white uppercase tracking-widest text-sm mb-6 font-bold">Studio</h5>
+                <ul class="space-y-4 text-zinc-500 font-light">
+                    <li>Gbagada, Lagos State</li>
+                    <li>Nigeria</li>
+                    <li><a href="tel:+2347038890258" class="hover:text-signature transition-colors">+234 703 889 0258</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-white uppercase tracking-widest text-sm mb-6 font-bold">Inquiries</h5>
+                <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="block w-full py-4 text-center bg-white text-black font-bold uppercase tracking-widest hover:bg-zinc-300 transition-colors duration-300 magnetic-el">
+                    Book via WhatsApp
+                </a>
+            </div>
         </div>
         
-        <div class="w-full pt-8 border-t border-white/5 flex flex-col items-center justify-center">
-            <p class="text-zinc-600 text-sm mb-4">&copy; 2026 InsightVisuals. All rights reserved.</p>
-            <a href="https://junestudios.com" class="font-serif italic text-sm tracking-wide text-zinc-500 hover:text-zinc-300 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between">
+            <p class="text-zinc-700 text-sm mb-4 md:mb-0">&copy; 2026 InsightVisuals. All rights reserved.</p>
+            <a href="https://junestudios.com" class="font-serif italic text-sm tracking-wide text-zinc-500 hover:text-zinc-300 transition-colors duration-300 magnetic-el">
                 Imagined by junestudios
             </a>
         </div>
     </footer>
 
-    <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center wa-pulse hover:scale-110 transition-transform duration-300">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.553 4.195 1.604 6.012L.268 24l6.104-1.604A11.96 11.96 0 0012.031 24c6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.996c-1.802 0-3.568-.484-5.116-1.402l-.367-.217-3.804.997 1.018-3.71-.238-.378A9.966 9.966 0 012.004 12.03c0-5.534 4.502-10.036 10.036-10.036 5.534 0 10.036 4.502 10.036 10.036 0 5.534-4.502 10.036-10.036 10.036zm5.503-7.525c-.302-.15-1.785-.882-2.062-.983-.277-.101-.48-.15-.682.15-.202.302-.783.983-.96 1.185-.176.202-.353.226-.655.076-.302-.15-1.275-.47-2.428-1.5-8.97-8.02-1.255-.98-1.457-1.332-.202-.353-.021-.544.13-.695.136-.136.302-.353.453-.53.15-.176.202-.302.302-.504.101-.202.05-.378-.025-.53-.076-.15-.682-1.644-.935-2.25-.246-.593-.496-.513-.682-.523-.176-.008-.378-.008-.58-.008-.202 0-.53.076-.807.378-.277.302-1.058 1.033-1.058 2.518 0 1.485 1.083 2.92 1.234 3.122.15.202 2.128 3.253 5.155 4.557 2.222.956 2.65.78 3.128.73.48-.05 1.547-.632 1.762-1.242.214-.61.214-1.135.15-1.242-.064-.108-.24-.16-.542-.31z"/></svg>
+    <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center wa-pulse hover:scale-110 transition-transform duration-300 magnetic-el hidden md:flex">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.553 4.195 1.604 6.012L.268 24l6.104-1.604A11.96 11.96 0 0012.031 24c6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.996c-1.802 0-3.568-.484-5.116-1.402l-.367-.217-3.804.997 1.018-3.71-.238-.378A9.966 9.966 0 012.004 12.03c0-5.534 4.502-10.036 10.036-10.036 5.534 0 10.036 4.502 10.036 10.036 0 5.534-4.502 10.036-10.036 10.036zm5.503-7.525c-.302-.15-1.785-.882-2.062-.983-.277-.101-.48-.15-.682.15-.202.302-.783.983-.96 1.185-.176.202-.353.226-.655.076-.302-.15-1.275-.47-2.428-1.5-8.97-8.02-1.255-.98-1.457-1.332-.202-.353-.021-.544.13-.695.136-.136.302-.353.453-.53.15-.176.202-.302.302-.504.101-.202.05-.378-.025-.53-.076-.15-.682-1.644-.935-2.25-.246-.593-.496-.513-.682-.523-.176-.008-.378-.008-.58-.008-.202 0-.53.076-.807.378-.277.302-1.058 1.033-1.058 2.518 0 1.485 1.083 2.92 1.234 3.122.15.202 2.128 3.253 5.155 4.557 2.222.956 2.65.78 3.128.73.48-.05 1.547-.632 1.762-1.242.214-.61.214-1.135.15-1.242-.064-.108-.24-.16-.542-.31z"/></svg>
     </a>
 </body>
 </html>
