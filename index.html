@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightVisuals | The Cinematic Canvas</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <script src="./app.js" defer></script>
+</head>
+<body class="antialiased selection:bg-white selection:text-black overflow-x-hidden">
+
+    <header class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1604904612715-47bf9d9bc670?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <h1 class="hero-title text-[12vw] md:text-[8vw] font-display uppercase leading-none tracking-tighter text-mask">
+                InsightVisuals
+            </h1>
+            <p class="hero-subtitle mt-6 text-lg md:text-2xl font-light tracking-widest text-zinc-400 uppercase">
+                Mastering Light & Shadow in Gbagada
+            </p>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-50 hero-scroll">
+            <span class="text-xs tracking-widest uppercase mb-2">Scroll to Explore</span>
+            <div class="w-[1px] h-12 bg-white bg-opacity-30 overflow-hidden relative">
+                <div class="w-full h-full bg-white absolute top-0 left-0 scroll-line-anim"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-wrapper" id="portfolio">
+            <div class="gallery-container">
+                <div class="gallery-panel bg-black">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Editorial Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
+                        Editorial
+                    </h2>
+                </div>
+                <div class="gallery-panel bg-zinc-950">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Wedding Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
+                        Wedding
+                    </h2>
+                </div>
+                <div class="gallery-panel bg-black">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Portrait Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
+                        Portrait
+                    </h2>
+                </div>
+                <div class="gallery-panel bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1600" class="image-reveal" alt="Commercial Photography">
+                    <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-display uppercase tracking-tighter mix-blend-difference text-white pointer-events-none opacity-80">
+                        Commercial
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 bg-black relative flex flex-col items-center justify-center text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex justify-center gap-2 mb-8 star-container">
+                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-10 h-10 text-signature" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                
+                <h3 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 social-text">
+                    5.0 Stars. 162 Reviews.
+                </h3>
+                <p class="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto social-text">
+                    Gbagada's most trusted lens. We don't just capture moments; we architect them. An impeccable reputation built frame by frame.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-onyx pt-20 pb-10 px-6 border-t border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mb-16">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <h4 class="text-3xl font-display uppercase tracking-tighter mb-2">InsightVisuals</h4>
+                <p class="text-zinc-500">Gbagada, Lagos</p>
+            </div>
+            
+            <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-zinc-300 transition-colors duration-300 cursor-pointer">
+                Book a Session
+            </a>
+        </div>
+        
+        <div class="w-full pt-8 border-t border-white/5 flex flex-col items-center justify-center">
+            <p class="text-zinc-600 text-sm mb-4">&copy; 2026 InsightVisuals. All rights reserved.</p>
+            <a href="https://junestudios.com" class="font-serif italic text-sm tracking-wide text-zinc-500 hover:text-zinc-300 transition-colors duration-300">
+                Imagined by junestudios
+            </a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2347038890258?text=Hello%20InsightVisuals!%20I%20would%20like%20to%20book%20a%20premium%20shoot." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center wa-pulse hover:scale-110 transition-transform duration-300">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.553 4.195 1.604 6.012L.268 24l6.104-1.604A11.96 11.96 0 0012.031 24c6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.996c-1.802 0-3.568-.484-5.116-1.402l-.367-.217-3.804.997 1.018-3.71-.238-.378A9.966 9.966 0 012.004 12.03c0-5.534 4.502-10.036 10.036-10.036 5.534 0 10.036 4.502 10.036 10.036 0 5.534-4.502 10.036-10.036 10.036zm5.503-7.525c-.302-.15-1.785-.882-2.062-.983-.277-.101-.48-.15-.682.15-.202.302-.783.983-.96 1.185-.176.202-.353.226-.655.076-.302-.15-1.275-.47-2.428-1.5-8.97-8.02-1.255-.98-1.457-1.332-.202-.353-.021-.544.13-.695.136-.136.302-.353.453-.53.15-.176.202-.302.302-.504.101-.202.05-.378-.025-.53-.076-.15-.682-1.644-.935-2.25-.246-.593-.496-.513-.682-.523-.176-.008-.378-.008-.58-.008-.202 0-.53.076-.807.378-.277.302-1.058 1.033-1.058 2.518 0 1.485 1.083 2.92 1.234 3.122.15.202 2.128 3.253 5.155 4.557 2.222.956 2.65.78 3.128.73.48-.05 1.547-.632 1.762-1.242.214-.61.214-1.135.15-1.242-.064-.108-.24-.16-.542-.31z"/></svg>
+    </a>
+</body>
+</html>
