@@ -1,41 +1,86 @@
-/* style.css */
+/* style.css - Expanded Architecture */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-/* Base Reset & Scrollbar hiding for cinematic feel */
+/* Base Reset & Hide Scrollbar */
 body { 
     margin: 0; 
     padding: 0; 
     background-color: #000; 
     color: #fff; 
+    overscroll-behavior: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* The Hero Typography Masking */
-.text-mask {
-    background: url('https://images.unsplash.com/photo-1554046920-90dcac823a07?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Custom Typography Utility */
+.outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     color: transparent;
+    transition: all 0.5s ease;
+}
+.gallery-panel:hover .outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
 }
 
-/* Horizontal Scroll Architecture */
+/* Glass Navigation */
+.glass-nav {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Custom Hardware-Accelerated Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    mix-blend-mode: difference;
+}
+.custom-cursor.hovered {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* CSS Film Grain Overlay */
+.film-grain {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Smooth Rotation Animation for Badges */
+@keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.rotate-animation {
+    animation: slowSpin 15s linear infinite;
+}
+
+/* Horizontal Gallery Core Setup */
 .gallery-wrapper { 
     width: 100%; 
     height: 100vh; 
     overflow: hidden; 
     position: relative; 
 }
-
 .gallery-container { 
     display: flex; 
-    width: 400vw; /* 4 panels = 400 viewport width */
+    width: 300vw; /* 3 panels */
     height: 100%; 
 }
-
 .gallery-panel { 
     width: 100vw; 
     height: 100vh; 
@@ -45,36 +90,22 @@ body {
     justify-content: center; 
     overflow: hidden; 
 }
-
-/* Image Hover Physics */
 .image-reveal { 
-    width: 70vw; 
+    width: 60vw; 
     height: 70vh; 
     object-fit: cover; 
     filter: grayscale(100%); 
-    transition: filter 0.8s ease, transform 0.8s ease; 
+    transition: filter 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); 
 }
-
 .gallery-panel:hover .image-reveal { 
     filter: grayscale(0%); 
     transform: scale(1.05); 
 }
 
-/* Scroll Line Animation for Hero Section */
-@keyframes scrolldown {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
-}
-.scroll-line-anim {
-    animation: scrolldown 1.5s ease-in-out infinite;
-}
-
-/* WhatsApp Pulse Ecosystem */
+/* WhatsApp Pulse */
 @keyframes pulse-ring {
     0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
-.wa-pulse { 
-    animation: pulse-ring 2s infinite; 
-}
+.wa-pulse { animation: pulse-ring 2s infinite; }
